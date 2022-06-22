@@ -1,0 +1,2 @@
+web: gunicorn PKOB.wsgi
+worker: python telebot.py

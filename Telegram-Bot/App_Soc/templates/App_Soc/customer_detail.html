@@ -1,0 +1,25 @@
+{% extends "App_Soc/base.html" %}
+
+{% block title %}
+    {{ latest_question.ic_text }}
+{% endblock %}
+
+{% block content %}
+    <h1>DATA COLLECTED</h1>
+    <h2>Ic Number:</h2>
+    <li>{{ latest_question_list.ic_text }}</li>
+    <h2>Name:</h2>
+    <li>{{ latest_question_list.name_text }}</li>
+    <h2>Phone:</h2>
+    <li>{{ latest_question_list.phone_text }}</li>
+    <h2>Income:</h2>
+    <li>{{ latest_question_list.income }}</li>
+    <h2>City:</h2>
+    <li>{{ latest_question_list.city }}</li>
+    <h2>Mukim:</h2>
+    <li>{{ latest_question_list.mukim }}</li>
+    <h2>Parlimen:</h2>
+    <li>{{ latest_question_list.parlimen }}</li>
+
+
+{% endblock %}

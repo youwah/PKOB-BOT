@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    <style>table,th,td{border:1px solid black;}</style>
+</head>
+<body>
+<h1>DATA COLLECTED</h1>
+<table style="width:30%">
+        <tr>
+        <th>IcNo</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Age</th>
+    </tr>
+    {% for question in latest_question_list %}
+     <tr>
+        <td><a href="{% url 'customer_detail' question.ic_text %}">{{ question.ic_text }}</a></td>
+        <td>{{ question.name_text }}</td>
+        <td>{{ question.phone_text }}</td>
+        <td>{{ question.calculate_age }}</td>
+         </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
